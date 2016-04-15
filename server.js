@@ -52,7 +52,7 @@ MongoClient.connect(config.db, function(err, db) {
 
     // Enable session management using express middleware
     app.use(session({
-        secret: config.cookieSecret,
+        secret: config.cookieSecret,     ///CSRF attack 
         saveUninitialized: true,
         resave: true
     }));
